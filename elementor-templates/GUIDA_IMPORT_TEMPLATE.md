@@ -18,7 +18,7 @@
 
 ## 🎯 Cosa Include Questo Template
 
-Ho creato un **template Elementor JSON completo** che puoi importare direttamente nel tuo sito WordPress con un solo click.
+Ho creato un **template Elementor ZIP completo** che puoi importare direttamente nel tuo sito WordPress con un solo click.
 
 ### ✅ Caratteristiche del Template
 
@@ -47,7 +47,9 @@ Ho creato un **template Elementor JSON completo** che puoi importare direttament
 
 ## 📋 PASSO 1: Download del Template
 
-Il file si chiama: **`homepage-optimized-template.json`**
+Il file si chiama: **`homepage-optimized-747disco.zip`**
+
+Questo è un file ZIP che Elementor può importare direttamente.
 
 Puoi trovarlo nella cartella `elementor-templates/` di questo repository.
 
@@ -69,10 +71,10 @@ Puoi trovarlo nella cartella `elementor-templates/` di questo repository.
    - In alto a destra trovi il bottone **"Importa Template"**
    - Clicca sopra
 
-4. **Carica il File JSON**
+4. **Carica il File ZIP**
    - Si aprirà una finestra di dialogo
    - Clicca **"Scegli File"**
-   - Seleziona `homepage-optimized-template.json`
+   - Seleziona `homepage-optimized-747disco.zip`
    - Clicca **"Importa ora"**
 
 5. **Aspetta il Completamento**
@@ -102,9 +104,11 @@ Puoi trovarlo nella cartella `elementor-templates/` di questo repository.
 
 3. **Importa Template**
    - Clicca sull'icona **cartella** (Template) in basso a sinistra
-   - Vai su tab **"Importa Template"**
-   - Carica `homepage-optimized-template.json`
+   - Vai su tab **"Il Mio Modello"** 
+   - Cerca "747 Disco - Homepage Ottimizzata"
    - Clicca **"Inserisci"**
+
+**NOTA:** Con il file ZIP, il template viene importato automaticamente nella libreria Elementor e poi puoi inserirlo nella pagina.
 
 ---
 
