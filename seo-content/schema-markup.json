@@ -1,0 +1,216 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://747disco.it/#business",
+      "name": "747 Disco",
+      "alternateName": "747 Disco Ciampino",
+      "description": "Location esclusiva per feste ed eventi a Roma. Discoteca privata per compleanni, eventi aziendali e celebrazioni speciali a Ciampino.",
+      "url": "https://747disco.it",
+      "telephone": "+39-347-181-1119",
+      "email": "info@747disco.it",
+      "priceRange": "€€€",
+      "image": [
+        "https://747disco.it/wp-content/uploads/2022/12/IMG_5953-1200x800-1.jpg",
+        "https://747disco.it/wp-content/uploads/2022/12/FDN1224-1.jpg",
+        "https://747disco.it/wp-content/uploads/2022/12/Banner-02.jpg"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://747disco.it/wp-content/uploads/2022/12/747trasp-1-e1521734874787.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Viale J. F. Kennedy, 131",
+        "addressLocality": "Ciampino",
+        "addressRegion": "RM",
+        "postalCode": "00043",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "41.7985",
+        "longitude": "12.5939"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "22:00",
+          "closes": "05:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/747disco",
+        "https://www.instagram.com/747disco"
+      ],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "41.7985",
+          "longitude": "12.5939"
+        },
+        "geoRadius": "50000"
+      },
+      "hasMap": "https://www.google.com/maps/place/Via+John+F.+Kennedy,+131,+00043+Ciampino+RM",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "NightClub",
+      "@id": "https://747disco.it/#nightclub",
+      "name": "747 Disco",
+      "description": "Discoteca esclusiva per eventi privati a Roma Sud",
+      "url": "https://747disco.it",
+      "sameAs": "https://747disco.it/#business"
+    },
+    {
+      "@type": "EventVenue",
+      "@id": "https://747disco.it/#eventvenue",
+      "name": "747 Disco - Location Eventi Roma",
+      "description": "Location per feste di compleanno, eventi aziendali, matrimoni e celebrazioni a Roma",
+      "url": "https://747disco.it",
+      "sameAs": "https://747disco.it/#business",
+      "maximumAttendeeCapacity": 300,
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "DJ Professionale",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Impianto Audio Professionale",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Luci LED",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Catering",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Parcheggio",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Fotografi Professionisti",
+          "value": true
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://747disco.it/#organization",
+      "name": "747 Disco",
+      "url": "https://747disco.it",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://747disco.it/wp-content/uploads/2022/12/747trasp-1-e1521734874787.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+39-347-181-1119",
+        "contactType": "Customer Service",
+        "areaServed": "IT",
+        "availableLanguage": ["Italian", "English"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/747disco",
+        "https://www.instagram.com/747disco"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://747disco.it/#website",
+      "url": "https://747disco.it",
+      "name": "747 Disco - Location Feste Eventi Roma",
+      "description": "Migliore location per feste ed eventi a Roma",
+      "publisher": {
+        "@id": "https://747disco.it/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://747disco.it/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://747disco.it/feste-18-anni-roma/#service",
+      "serviceType": "Organizzazione Feste 18 Anni",
+      "provider": {
+        "@id": "https://747disco.it/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Roma"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://747disco.it/feste-18-anni-roma/",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+39-347-181-1119"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "1590",
+        "priceCurrency": "EUR",
+        "description": "Pacchetto Festa 18 Anni All-Inclusive",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://747disco.it/eventi-aziendali/#service",
+      "serviceType": "Eventi Aziendali",
+      "provider": {
+        "@id": "https://747disco.it/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Roma"
+      },
+      "description": "Organizzazione eventi aziendali, meeting, team building e cene aziendali a Roma"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://747disco.it/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://747disco.it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Feste 18 Anni",
+          "item": "https://747disco.it/feste-18-anni-roma/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Eventi Aziendali",
+          "item": "https://747disco.it/eventi-aziendali/"
+        }
+      ]
+    }
+  ]
+}

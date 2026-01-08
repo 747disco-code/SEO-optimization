@@ -1,0 +1,559 @@
+/**
+ * 747 Disco - CSS Custom per Ottimizzazioni Performance e UX
+ * 
+ * COME USARE:
+ * 1. Elementor > Custom CSS (globale)
+ * 2. Oppure Appearance > Customize > Additional CSS
+ * 3. Oppure child theme style.css
+ */
+
+/* ============================================================================
+   STICKY CTA MOBILE - Bottone chiamata fisso in basso
+   ============================================================================ */
+
+.sticky-cta-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #917F59 0%, #8D7B57 100%);
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.sticky-cta-mobile.hide {
+    transform: translateY(100%);
+}
+
+.sticky-cta-mobile a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.sticky-cta-mobile a:hover,
+.sticky-cta-mobile a:active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Nasconde sticky CTA su desktop */
+@media (min-width: 768px) {
+    .sticky-cta-mobile {
+        display: none;
+    }
+}
+
+/* ============================================================================
+   LAZY LOADING - Animazioni fade-in per elementi lazy loaded
+   ============================================================================ */
+
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Placeholder per immagini in caricamento */
+img[loading="lazy"]:not(.loaded) {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ============================================================================
+   PERFORMANCE - Ottimizzazioni rendering
+   ============================================================================ */
+
+/* Will-change per elementi animati */
+.elementor-section[data-settings*="motion_fx"],
+.elementor-widget[data-settings*="_animation"] {
+    will-change: transform, opacity;
+}
+
+/* Rimuovi will-change dopo animazione */
+.elementor-invisible {
+    will-change: auto;
+}
+
+/* GPU acceleration per slider e carousel */
+.swiper-container,
+.elementor-slides,
+.elementor-image-carousel {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+/* ============================================================================
+   TYPOGRAPHY - Leggibilità migliorata
+   ============================================================================ */
+
+/* Font smoothing per rendering migliore */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Migliora leggibilità testi lunghi */
+.elementor-text-editor,
+.entry-content {
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+}
+
+/* Titoli più impattanti */
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Paragrafi più leggibili su mobile */
+@media (max-width: 767px) {
+    .elementor-text-editor p,
+    .entry-content p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+    
+    h1 {
+        font-size: 28px !important;
+    }
+    
+    h2 {
+        font-size: 24px !important;
+    }
+    
+    h3 {
+        font-size: 20px !important;
+    }
+}
+
+/* ============================================================================
+   BUTTONS - CTA più visibili e cliccabili
+   ============================================================================ */
+
+/* Migliora area di click button mobile */
+@media (max-width: 767px) {
+    .elementor-button,
+    .wp-block-button__link {
+        min-height: 48px;
+        min-width: 48px;
+        padding: 12px 24px !important;
+        font-size: 16px !important;
+    }
+}
+
+/* Effetto hover migliorato */
+.elementor-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.elementor-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.elementor-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Pulse animation per CTA primari */
+.cta-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(145, 127, 89, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(145, 127, 89, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(145, 127, 89, 0);
+    }
+}
+
+/* ============================================================================
+   FORMS - Ottimizzazione mobile
+   ============================================================================ */
+
+/* Input più grandi su mobile */
+@media (max-width: 767px) {
+    .elementor-field-group input,
+    .elementor-field-group textarea,
+    .elementor-field-group select {
+        font-size: 16px !important; /* Previene zoom iOS */
+        padding: 12px !important;
+        min-height: 48px;
+    }
+    
+    .elementor-field-group textarea {
+        min-height: 120px;
+    }
+}
+
+/* Focus states più visibili */
+.elementor-field-group input:focus,
+.elementor-field-group textarea:focus,
+.elementor-field-group select:focus {
+    outline: 2px solid #917F59;
+    outline-offset: 2px;
+    border-color: #917F59;
+}
+
+/* Labels più leggibili */
+.elementor-field-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+}
+
+/* Required asterisk più visibile */
+.elementor-mark-required {
+    color: #FF6B6B;
+    font-weight: bold;
+}
+
+/* ============================================================================
+   MOBILE MENU - Hamburger migliorato
+   ============================================================================ */
+
+/* Mobile menu più accessibile */
+@media (max-width: 1024px) {
+    .elementor-menu-toggle {
+        min-width: 48px;
+        min-height: 48px;
+        padding: 12px;
+    }
+    
+    /* Menu mobile full-screen */
+    .elementor-nav-menu--dropdown {
+        min-height: 100vh;
+        background: rgba(34, 34, 34, 0.98);
+    }
+    
+    .elementor-nav-menu--dropdown .elementor-item {
+        font-size: 18px;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(145, 127, 89, 0.2);
+    }
+}
+
+/* ============================================================================
+   IMAGES - Aspect ratio e lazy loading
+   ============================================================================ */
+
+/* Previeni layout shift con aspect ratio */
+.elementor-widget-image img {
+    height: auto;
+    width: 100%;
+}
+
+/* Container immagini responsive */
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================================================
+   WHATSAPP BUTTON - Floating button
+   ============================================================================ */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 80px; /* Sopra sticky CTA mobile */
+    right: 20px;
+    background: #25D366;
+    color: #FFFFFF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 9998;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+    background: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Nascondi su mobile se c'è sticky CTA */
+@media (max-width: 767px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
+
+/* ============================================================================
+   REVIEWS/TESTIMONIALS - Cards ottimizzate
+   ============================================================================ */
+
+.review-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #917F59;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(145, 127, 89, 0.3);
+}
+
+.review-stars {
+    color: #FFD700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: 600;
+    color: #917F59;
+    margin-top: 10px;
+}
+
+/* ============================================================================
+   ACCESSIBILITY - Miglioramenti accessibilità
+   ============================================================================ */
+
+/* Skip to content link */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #917F59;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Focus visibile per navigazione keyboard */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #917F59;
+    outline-offset: 2px;
+}
+
+/* Rimuovi outline solo se uso mouse */
+.using-mouse :focus {
+    outline: none;
+}
+
+/* ============================================================================
+   PRINT STYLES - Ottimizzazione per stampa
+   ============================================================================ */
+
+@media print {
+    .sticky-cta-mobile,
+    .whatsapp-float,
+    .elementor-menu-toggle,
+    .elementor-section[data-element_type="section"]:not(.print-visible) {
+        display: none !important;
+    }
+    
+    body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* ============================================================================
+   UTILITIES - Classi utility riutilizzabili
+   ============================================================================ */
+
+/* Text utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Spacing utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+
+/* Display utilities */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+
+/* Responsive utilities */
+@media (max-width: 767px) {
+    .d-none-mobile { display: none !important; }
+    .d-block-mobile { display: block !important; }
+}
+
+@media (min-width: 768px) {
+    .d-none-desktop { display: none !important; }
+    .d-block-desktop { display: block !important; }
+}
+
+/* ============================================================================
+   CUSTOM SCROLLBAR - Branded scrollbar
+   ============================================================================ */
+
+/* Custom scrollbar (solo browser Webkit) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222222;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #917F59;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8D7B57;
+}
+
+/* ============================================================================
+   ANIMATIONS - Animazioni custom per engagement
+   ============================================================================ */
+
+/* Fade in on scroll */
+.fade-in-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide in from left */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide in from right */
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ============================================================================
+   FINE CUSTOM CSS
+   ============================================================================ */
+
+/**
+ * NOTE:
+ * - Testa ogni modifica su browser diversi
+ * - Verifica responsive su mobile/tablet
+ * - Usa DevTools per debug
+ * - Minimizza CSS in produzione
+ * 
+ * Per supporto: 
+ * - Documentazione Elementor: https://elementor.com/help/
+ * - CSS Reference: https://developer.mozilla.org/en-US/docs/Web/CSS
+ */
