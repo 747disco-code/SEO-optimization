@@ -1,0 +1,144 @@
+<style>
+/* SEZIONE FOTO - Stili */
+.foto-747 {
+    background: linear-gradient(135deg, #2a2a2a 0%, #222 100%);
+    padding: 80px 20px;
+}
+
+.foto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.foto-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.foto-text h2 {
+    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+}
+
+.foto-text p {
+    color: #ddd;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.foto-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.foto-btn:hover {
+    background: white;
+    color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+}
+
+.foto-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.foto-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+    border: 2px solid #917F59;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.foto-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(145, 127, 89, 0.5);
+    z-index: 2;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.foto-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .foto-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .foto-text h2 {
+        font-size: 2rem;
+    }
+    .foto-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- Sezione Foto HTML -->
+<div class="foto-747">
+    <div class="foto-container">
+        <div class="foto-content">
+            <!-- Testo -->
+            <div class="foto-text">
+                <h2>FOTO E VIDEO</h2>
+                <p>Un evento importante non può essere dimenticato! Le tue foto saranno sempre visibili, per tutta la serata sullo schermo della sala, scattate e trasmesse in tempo reale dal nostro fotografo.</p>
+                
+                <p>Inoltre, il giorno dopo la tua indimenticabile festa potrai vedere tutte le tue foto qui sul sito nella sezione <strong>Foto Eventi</strong> oppure su Facebook dove sarà creato un Album con tutte le foto della tua serata.</p>
+                
+                <p>Guarda ora i nostri album e tieniti pronto a festeggiare nella nostra inedita location per feste ed eventi a Roma.</p>
+                
+                <a href="https://747disco.it/foto-feste/" class="foto-btn" target="_blank">Vedi Tutte le Foto</a>
+            </div>
+            
+            <!-- Gallery -->
+            <div class="foto-gallery">
+                <!-- 
+                ISTRUZIONI: Sostituisci gli URL con le tue foto da WordPress Media Library
+                1. Carica le foto in Media
+                2. Copia l'URL dell'immagine
+                3. Sostituisci qui sotto
+                -->
+                
+                <div class="foto-item">
+                    <img src="https://747disco.it/wp-content/uploads/2022/12/IMG_5729.jpg" alt="Festa 747 Disco 1">
+                </div>
+                
+                <div class="foto-item">
+                    <img src="https://747disco.it/wp-content/uploads/2022/12/0017-_A9_0055-1200x800-1.jpg" alt="Festa 747 Disco 2">
+                </div>
+                
+                <div class="foto-item">
+                    <img src="https://747disco.it/wp-content/uploads/2022/12/FDN1703-1199x800-1-1.jpg" alt="Festa 747 Disco 3">
+                </div>
+                
+                <div class="foto-item">
+                    <img src="https://747disco.it/wp-content/uploads/2022/12/58442072_414447906042366_2566414556188377088_o.jpg" alt="Festa 747 Disco 4">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

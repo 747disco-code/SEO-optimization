@@ -1,0 +1,93 @@
+<style>
+/* MOBILE CTA BAR - Stili */
+.mobile-cta-747 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #8D7B57 0%, #917F59 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 10px;
+    z-index: 99999;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+}
+
+.mobile-cta-747 a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.mobile-cta-747 a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.05);
+}
+
+.cta-phone-747 {
+    background: rgba(255,255,255,0.1);
+}
+
+.cta-whatsapp-747 {
+    background: rgba(37, 211, 102, 0.3);
+}
+
+/* Nascondi su desktop, mostra solo su mobile */
+@media (min-width: 769px) {
+    .mobile-cta-747 {
+        display: none;
+    }
+}
+
+/* Mobile ottimizzato */
+@media (max-width: 768px) {
+    .mobile-cta-747 {
+        display: flex;
+    }
+    .mobile-cta-747 a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-cta-747 a {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+        gap: 5px;
+    }
+}
+</style>
+
+<!-- Mobile CTA Bar HTML -->
+<div class="mobile-cta-747">
+    <a href="tel:+393471811119" class="cta-phone-747">
+        📞 Chiama Ora
+    </a>
+    <a href="https://wa.me/393471811119" class="cta-whatsapp-747" target="_blank">
+        💬 WhatsApp
+    </a>
+</div>
+
+<!-- 
+ISTRUZIONI:
+Questa barra sarà SEMPRE visibile in basso sullo schermo mobile.
+Si nasconde automaticamente su desktop (> 768px).
+
+Per personalizzare:
+- Numero telefono: cambia +393471811119
+- Colori: modifica i codici in <style>
+- Testo: cambia "Chiama Ora" e "WhatsApp"
+
+NOTA IMPORTANTE:
+Questa sezione va inserita come ULTIMA sezione della pagina
+così sarà sempre visibile sopra tutto il contenuto.
+-->
