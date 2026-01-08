@@ -1,0 +1,200 @@
+<style>
+/* LOCATION - Stili */
+.location-747 {
+    background: linear-gradient(to bottom, #917F59, #222);
+    padding: 80px 20px 120px;
+    border-top: 2px solid #917F59;
+}
+
+.location-747 h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.location-747 h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: white;
+}
+
+.location-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(145, 127, 89, 0.5);
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.location-info {
+    border: 1px solid #917F59;
+    padding: 40px;
+}
+
+.location-info h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.location-info p {
+    color: #ddd;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.location-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 35px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.location-btn:hover {
+    background: white;
+    color: #222;
+    transform: translateY(-2px);
+}
+
+.location-map {
+    border: 1px solid #917F59;
+    overflow: hidden;
+    height: 100%;
+    min-height: 400px;
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    min-height: 400px;
+}
+
+/* Indirizzo in evidenza */
+.address-highlight {
+    background: rgba(145, 127, 89, 0.2);
+    border-left: 4px solid #917F59;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.address-highlight p {
+    margin: 0;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.address-highlight strong {
+    color: #B1874B;
+    font-size: 1.3rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .location-747 h2 {
+        font-size: 2rem;
+    }
+    .location-container {
+        padding: 30px 20px;
+    }
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .location-info {
+        padding: 25px;
+    }
+    .location-map {
+        min-height: 300px;
+    }
+}
+</style>
+
+<!-- Sezione Location HTML -->
+<div class="location-747" id="location">
+    <h2>DOVE SIAMO</h2>
+    
+    <div class="location-container">
+        <div class="location-grid">
+            <!-- Info Location -->
+            <div class="location-info">
+                <h3>📍 Viale J. F. Kennedy, 131</h3>
+                
+                <div class="address-highlight">
+                    <p><strong>00043 Ciampino, Roma</strong></p>
+                </div>
+                
+                <p>Il nostro storico locale ha cambiato volto, ma non posizione!<br>
+                Ci trovi a <strong>Roma Sud, nella zona di Ciampino</strong>, facilmente raggiungibile dal GRA, Appia, Tuscolana, Cinecittà, Eur, Ardeatina, Laurentina e Romanina.</p>
+                
+                <p>Siamo in una posizione strategica per organizzare la tua <strong>festa di compleanno a Roma</strong>, comoda da raggiungere da tutta la città.</p>
+                
+                <p>Vuoi vedere di persona com'è cambiato il 747 Disco? Visita la nostra location o contattaci per fissare un appuntamento: saremo felici di accoglierti e mostrarti i nuovi ambienti completamente rinnovati.</p>
+                
+                <p><strong>Siamo qui per aiutarti a creare un evento davvero indimenticabile!</strong></p>
+                
+                <a href="#contatti" class="location-btn">Prenota Appuntamento</a>
+                
+                <!-- Contatti Diretti -->
+                <div style="margin-top: 35px; padding-top: 25px; border-top: 1px solid rgba(145, 127, 89, 0.3);">
+                    <p style="color: white; font-size: 1.1rem; margin-bottom: 10px;">
+                        <strong>📞 Telefono:</strong><br>
+                        <a href="tel:+393471811119" style="color: #917F59; text-decoration: none; font-size: 1.3rem;">
+                            +39 347 181 1119
+                        </a>
+                    </p>
+                    <p style="color: white; font-size: 1.1rem;">
+                        <strong>💬 WhatsApp:</strong><br>
+                        <a href="https://wa.me/393471811119" style="color: #25D366; text-decoration: none; font-size: 1.3rem;">
+                            Chatta con noi
+                        </a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Mappa -->
+            <div class="location-map">
+                <!-- 
+                MAPPA GOOGLE MAPS
+                
+                Se l'indirizzo è corretto, lascia così.
+                Se vuoi personalizzare:
+                1. Vai su Google Maps
+                2. Cerca "Viale J. F. Kennedy, 131, Ciampino"
+                3. Clicca su "Condividi" → "Incorpora mappa"
+                4. Copia il codice iframe
+                5. Sostituisci qui sotto
+                -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.5!2d12.594!3d41.805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDQ4JzE4LjAiTiAxMsKwMzUnMzguNCJF!5e0!3m2!1sit!2sit!4v1234567890"
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>

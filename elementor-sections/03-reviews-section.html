@@ -1,0 +1,104 @@
+<style>
+/* SEZIONE RECENSIONI - Stili */
+.reviews-747 {
+    background: #222;
+    padding: 60px 20px 100px;
+    text-align: center;
+}
+
+.reviews-747 h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.reviews-747 h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #917F59;
+}
+
+.reviews-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+    line-height: 1.8;
+}
+
+.reviews-content p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.reviews-widget {
+    margin-top: 50px;
+    background: rgba(0,0,0,0.3);
+    padding: 40px;
+    border: 1px solid #917F59;
+    border-radius: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .reviews-747 h2 {
+        font-size: 2rem;
+    }
+    .reviews-content p {
+        font-size: 1rem;
+    }
+    .reviews-widget {
+        padding: 20px;
+    }
+}
+</style>
+
+<!-- Sezione Recensioni HTML -->
+<div class="reviews-747">
+    <h2>COSA DICONO DI NOI</h2>
+    
+    <div class="reviews-content">
+        <p>Non lo diciamo solo noi: chi ha scelto <strong>747 Disco per la sua festa di compleanno a Roma</strong> racconta un'esperienza indimenticabile, fatta di emozioni, divertimento e professionalità.</p>
+        
+        <p>Le <strong>recensioni dei nostri clienti</strong> parlano chiaro: serate perfette, organizzazione impeccabile e un team sempre presente per soddisfare ogni esigenza. Ogni evento viene curato nei minimi dettagli, con passione e competenza.</p>
+        
+        <p>Leggi le testimonianze di chi ha già vissuto una <strong>festa privata al 747 Disco</strong> e scopri perché siamo una delle <strong>location per feste più recensite e apprezzate di Roma</strong>.</p>
+        
+        <p>Lasciati ispirare dalle loro parole e inizia anche tu a immaginare il tuo evento perfetto!</p>
+    </div>
+    
+    <!-- Widget Recensioni Google -->
+    <div class="reviews-widget">
+        <!-- 
+        ISTRUZIONI: Sostituisci questo commento con il widget recensioni Google
+        
+        Opzione 1: Plugin WordPress "Widgets for Google Reviews"
+        - Installa il plugin
+        - Configura con il tuo Google Place ID
+        - Copia lo shortcode qui
+        
+        Opzione 2: TrustIndex (già nel tuo backup)
+        - Usa: [trustindex no-registration=google]
+        
+        Opzione 3: Embed manuale Google Reviews
+        - Crea widget su https://www.trustindex.io/
+        - Incolla il codice qui
+        -->
+        
+        <p style="color: #917F59; font-size: 1.2rem;">
+            ⭐⭐⭐⭐⭐<br>
+            <strong>Oltre 100 recensioni a 5 stelle su Google!</strong>
+        </p>
+        
+        <!-- Esempio recensione statica (opzionale) -->
+        <div style="margin-top: 30px; font-style: italic; color: #ddd;">
+            <p>"Festa di 18 anni perfetta! Location fantastica, staff professionale e serata indimenticabile. Consiglio vivamente!" - <strong>Sofia, 18 anni</strong></p>
+        </div>
+    </div>
+</div>
