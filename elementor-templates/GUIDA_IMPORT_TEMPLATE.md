@@ -18,7 +18,7 @@
 
 ## 🎯 Cosa Include Questo Template
 
-Ho creato un **template Elementor ZIP completo** che puoi importare direttamente nel tuo sito WordPress con un solo click.
+Ho creato un **template Elementor ZIP completo** che puoi importare facilmente nel tuo sito WordPress.
 
 ### ✅ Caratteristiche del Template
 

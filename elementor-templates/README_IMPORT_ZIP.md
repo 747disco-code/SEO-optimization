@@ -59,8 +59,10 @@ Il file **`homepage-optimized-747disco.zip`** è un pacchetto di export Elemento
 
 3. **📝 Form Contact Form 7**:
    - Sezione Contatti: shortcode form
-   - Sostituisci `[contact-form-7 id="461"]` con il TUO form ID
+   - ⚠️ **IMPORTANTE**: Sostituisci `[contact-form-7 id="461"]` con il TUO form ID
+   - Il numero `461` è solo un esempio - NON funzionerà sul tuo sito
    - Trova il tuo ID in: Dashboard → Contact → Contact Forms
+   - Esempio corretto: `[contact-form-7 id="TUO_ID_QUI"]`
 
 4. **🖼️ Immagini** (opzionale):
    - Hero Section: immagine di background
