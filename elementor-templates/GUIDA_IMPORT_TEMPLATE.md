@@ -85,10 +85,14 @@ Puoi trovarlo nella cartella `elementor-templates/` di questo repository.
    - Vai su `Pagine → Tutte le Pagine`
    - Trova la tua Homepage (quella con icona "casa")
    - Clicca **"Modifica con Elementor"**
-   - In basso a sinistra clicca sull'icona **cartella** (Template Salvati)
-   - Cerca il template appena importato
+   - **Guarda in ALTO A SINISTRA nell'editor**
+   - Clicca il pulsante **⊕ (simbolo più) VERDE**
+   - Si apre popup → clicca tab **"I miei template"**
+   - Cerca il template "747 Disco - Homepage Ottimizzata"
    - Clicca **"Inserisci"**
    - Clicca **"Aggiorna"** in basso a sinistra
+
+**Nota:** NON cercare un'icona cartella - usa il pulsante ⊕ verde in alto a sinistra!
 
 ### Opzione B: Import Diretto nella Homepage
 

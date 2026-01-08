@@ -24,10 +24,16 @@ Il file **`homepage-optimized-747disco.zip`** è un pacchetto di export Elemento
 6. **Clicca "Import Now"**
 7. **Aspetta il completamento** (5-10 secondi)
 8. **Vai su Pagine → Homepage → Modifica con Elementor**
-9. **Clicca icona cartella (Template)**
-10. **Cerca "747 Disco - Homepage Ottimizzata"**
-11. **Clicca "Inserisci"**
-12. **Salva e pubblica**
+9. **Nell'editor Elementor, guarda in ALTO A SINISTRA**
+10. **Clicca il pulsante ⊕ (simbolo più) VERDE** 
+11. **Si apre una finestra popup → clicca tab "I miei template"**
+12. **Cerca "747 Disco - Homepage Ottimizzata"** nella lista
+13. **Clicca "Inserisci"** accanto al template
+14. **Salva e pubblica**
+
+**Nota:** Se non vedi il template, prova:
+- Click destro su area vuota → "Aggiungi Template" → Tab "I miei template"
+- Oppure cancella il contenuto esistente prima di inserire il template
 
 ### Metodo 2: Import Tramite Template Library
 
@@ -150,6 +156,13 @@ Il template include:
 - Vai su Elementor → Template Salvati
 - Verifica che "747 Disco - Homepage Ottimizzata" sia nella lista
 - Ricarica la pagina
+
+### ❌ Non trovo l'icona cartella per inserire il template
+**Soluzione:**
+- L'icona cartella NON esiste - usa il pulsante ⊕ (più) in alto a sinistra
+- OPPURE click destro su area vuota → "Aggiungi Template"
+- OPPURE cancella contenuto esistente → si aprirà popup automatico
+- Il template appare nel tab "I miei template"
 
 ### ❌ Google Maps non funziona
 **Soluzione:**
