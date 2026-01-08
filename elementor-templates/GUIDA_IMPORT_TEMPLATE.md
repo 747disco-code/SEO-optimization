@@ -1,5 +1,21 @@
 # 📥 Guida Import Template Elementor - Homepage 747 Disco
 
+## ⚠️ IMPORTANTE - Leggi Prima di Importare!
+
+**Questo template contiene valori di esempio che DEVI modificare:**
+
+1. **Numeri di telefono** (06 4521 4007, 349 349 3747) → I TUOI numeri
+2. **ID Form Contact Form 7** (id="461") → Il TUO form ID  
+3. **Email** (info@747disco.it) → La TUA email
+4. **Link pagine** → Verifica che esistano sul tuo sito
+
+**Tempo necessario personalizzazione:** 30-60 minuti
+
+❌ **NON pubblicare il template senza personalizzarlo!**  
+✅ **Segui tutti i passi di personalizzazione in questa guida**
+
+---
+
 ## 🎯 Cosa Include Questo Template
 
 Ho creato un **template Elementor JSON completo** che puoi importare direttamente nel tuo sito WordPress con un solo click.
@@ -98,17 +114,54 @@ Dopo l'import, devi personalizzare alcuni elementi con i tuoi dati:
 
 ### 🔧 Elementi da Personalizzare
 
-#### 1. **Numeri di Telefono**
-Cerca e sostituisci:
+#### 1. **Numeri di Telefono** ⚠️ IMPORTANTE
+
+Il template include numeri di telefono di esempio che **DEVI** cambiare con i tuoi:
+
+**Valori da cercare e sostituire:**
 - `06 4521 4007` → Il tuo numero fisso
-- `349 349 3747` → Il tuo numero WhatsApp
-- `tel:+390645214007` → Il tuo numero con prefisso internazionale
+- `349 349 3747` → Il tuo numero WhatsApp/mobile
+- `tel:+390645214007` → Il tuo numero in formato internazionale (usa https://www.countrycallingcodes.com/italy-phone-code/ per convertire)
 - `https://wa.me/393493493747` → Il tuo link WhatsApp
 
-**Come fare:**
-1. Clicca sulla sezione con il telefono
-2. Nel pannello a sinistra modifica il testo e i link
-3. Salva
+**Come modificarli in Elementor (PASSO-PASSO):**
+
+1. **Hero Section (CTA in alto):**
+   - Clicca sul bottone "📞 Chiama Ora"
+   - Nel pannello a sinistra, tab "Contenuto"
+   - Sezione "Link" → modifica URL con `tel:+39TUONUMERO`
+   - Salva
+
+2. **Hero Section (WhatsApp):**
+   - Clicca sul bottone "💬 WhatsApp"
+   - Nel pannello a sinistra, tab "Contenuto"
+   - Sezione "Link" → modifica URL con `https://wa.me/39TUONUMERO`
+   - Salva
+
+3. **Sezione Contatti (Telefono):**
+   - Scroll fino alla sezione "Richiedi Informazioni"
+   - Clicca sulla card con icona 📞
+   - Clicca sul link del numero di telefono
+   - Nel pannello a sinistra, modifica l'HTML:
+     - Trova: `tel:+390645214007`
+     - Sostituisci con: `tel:+39TUONUMERO`
+     - Trova: `06 4521 4007`
+     - Sostituisci con: `IL TUO NUMERO`
+   - Salva
+
+4. **Sezione Contatti (WhatsApp):**
+   - Clicca sulla card con icona 💬
+   - Clicca sul link WhatsApp
+   - Nel pannello a sinistra, modifica l'HTML:
+     - Trova: `https://wa.me/393493493747`
+     - Sostituisci con: `https://wa.me/39TUONUMERO`
+     - Trova: `349 349 3747`
+     - Sostituisci con: `IL TUO NUMERO`
+   - Salva
+
+**NOTA**: Per il formato internazionale, rimuovi lo 0 iniziale e aggiungi +39:
+- Esempio: `06 4521 4007` diventa `+390645214007`
+- Esempio: `349 349 3747` diventa `+393493493747`
 
 #### 2. **Email**
 Cerca e sostituisci:
@@ -125,19 +178,47 @@ Le immagini attualmente usano URL del tuo sito esistente:
 4. Carica la tua immagine o scegli dalla libreria
 5. Salva
 
-#### 4. **Form di Contatto**
-Il template include un widget shortcode per il form:
+#### 4. **Form di Contatto** ⚠️ CRITICO - DEVI MODIFICARE
+
+Il template include un widget shortcode per il form con un ID di esempio:
 ```
 [contact-form-7 id="461"]
 ```
 
-**Sostituisci con il tuo form:**
-1. Trova lo shortcode del tuo form Contact Form 7
-   - Dashboard → Contatto → Moduli di contatto
-   - Copia lo shortcode (es. `[contact-form-7 id="123"]`)
-2. In Elementor, clicca sul widget "Shortcode" nella sezione contatti
-3. Incolla il TUO shortcode
-4. Salva
+**⚠️ QUESTO ID NON ESISTE SUL TUO SITO!** Devi sostituirlo con il TUO form.
+
+**PASSO-PASSO:**
+
+1. **Trova il TUO ID form Contact Form 7:**
+   - Dashboard WordPress → Contatto → Moduli di contatto
+   - Vedrai una lista dei tuoi form
+   - Ogni form ha uno shortcode tipo: `[contact-form-7 id="123" title="Modulo di contatto"]`
+   - **Copia tutto lo shortcode** (es. `[contact-form-7 id="123"]`)
+
+2. **Se NON hai un form, creane uno:**
+   - Clicca "Aggiungi nuovo"
+   - Dai un nome (es. "Form Contatto Homepage")
+   - Lascia i campi predefiniti o personalizzali
+   - Clicca "Salva"
+   - Copia lo shortcode che appare in alto
+
+3. **Sostituisci nello shortcode Elementor:**
+   - Apri la homepage in Elementor
+   - Scroll fino alla sezione "Richiedi Informazioni" (in fondo)
+   - Clicca sul widget "Shortcode" (dovrebbe essere l'ultimo elemento)
+   - Nel pannello a sinistra, vedrai la sezione "Shortcode"
+   - **Cancella** `[contact-form-7 id="461"]`
+   - **Incolla** il TUO shortcode copiato prima
+   - Clicca "Aggiorna" in basso a sinistra
+
+4. **Testa il form:**
+   - Salva e visualizza la pagina
+   - Scroll in fondo
+   - Compila il form con dati di prova
+   - Invia
+   - Controlla che ricevi l'email
+
+**NOTA**: Se non vedi il form dopo aver incollato lo shortcode, verifica che il plugin Contact Form 7 sia installato e attivo.
 
 #### 5. **Mappa Google**
 La mappa è già configurata per:
