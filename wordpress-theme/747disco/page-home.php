@@ -235,7 +235,31 @@ get_header(); ?>
                 </div>
             </div>
             <div class="contact-form-wrapper">
-                <?php echo do_shortcode( '[contact-form-7 id="1" title="Contact form 1"]' ); ?>
+                <?php 
+                // Display Contact Form 7 if available
+                if ( function_exists( 'wpcf7' ) ) {
+                    // Try to get the first contact form
+                    $forms = get_posts( array(
+                        'post_type'   => 'wpcf7_contact_form',
+                        'numberposts' => 1,
+                    ) );
+                    
+                    if ( ! empty( $forms ) ) {
+                        echo do_shortcode( '[contact-form-7 id="' . $forms[0]->ID . '"]' );
+                    } else {
+                        echo '<p>Per abilitare il form di contatto, installa il plugin <strong>Contact Form 7</strong> e crea un nuovo form.</p>';
+                    }
+                } else {
+                    echo '<div class="contact-form">';
+                    echo '<p>Installa il plugin <strong>Contact Form 7</strong> per abilitare il form di contatto.</p>';
+                    echo '<p>Oppure contattaci direttamente:</p>';
+                    echo '<ul>';
+                    echo '<li>📞 ' . esc_html( get_theme_mod( '747disco_phone', '+39 06 123 4567' ) ) . '</li>';
+                    echo '<li>✉️ ' . esc_html( get_theme_mod( '747disco_email', 'info@747disco.it' ) ) . '</li>';
+                    echo '</ul>';
+                    echo '</div>';
+                }
+                ?>
             </div>
         </div>
     </div>
